@@ -1,0 +1,21 @@
+@import "./styles/reset.css";
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Open sans';
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 50px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: black;
+}

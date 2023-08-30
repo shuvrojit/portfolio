@@ -1,0 +1,115 @@
+  @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+header {
+    /* border: 3px solid black; */
+    margin-bottom: 2rem;
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header>a:hover {
+    text-decoration: none;
+}
+
+.header-intro {
+    width: 240px;
+}
+
+
+.header-intro>p:nth-child(1) {
+    font-size: 1.2em;
+    letter-spacing: 1.5px;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+}
+
+.header-intro>p:nth-child(2) {
+    font-size: 1rem;
+    margin-top: -16px;
+    font-family: "Open sans", Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+}
+
+
+.header-navigation {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.header-navigation li {
+
+    font-size: 1.02rem;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+}
+
+
+
+.contact-btn {
+  align-items: center;
+  /* background-color: #fee6e3; */
+  background-color: #ffffff;
+  border: 2px solid #111;
+  border-radius: 50px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.contact-btn:after {
+  background-color: #111;
+  border-radius: 50px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(2px, 4px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.contact-btn:hover:after {
+  transform: translate(0, 0);
+}
+
+.contact-btn:active {
+  background-color: #ffdeda;
+  /* background-color: #fff; */
+  outline: 0;
+}
+
+.contact-btn:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .contact-btn {
+    padding: 0 36px;
+  }
+}
+
+@media (max-width: 650px) {
+    .header-navigation {
+        display: none;
+    }
+}
