@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "private": false,
+  "private": true,
   "homepage": "https://shuvrojit.github.io/portfolio",
   "version": "0.0.0",
   "type": "module",
@@ -9,9 +9,12 @@
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "format": "prettier --write \"src/**/*.{ts,tsx}\""
+    "format": "prettier --write \"src/**/*.{ts,tsx}\"",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "gh-pages": "^6.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
