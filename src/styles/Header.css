@@ -8,6 +8,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 header>a:hover {
@@ -16,6 +17,8 @@ header>a:hover {
 
 .header-intro {
     width: 240px;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -27,7 +30,6 @@ header>a:hover {
 
 .header-intro>p:nth-child(2) {
     font-size: 1rem;
-    margin-top: -16px;
     font-family: "Open sans", Arial, Helvetica, sans-serif;
     letter-spacing: 1px;
 }
@@ -108,8 +110,14 @@ header>a:hover {
   }
 }
 
+/* FIXME: Move nav bar alignment to center */
 @media (max-width: 650px) {
     .header-navigation {
-        display: none;
+        width: 100%;
+        margin: 0 auto;
+        order: 3;
+        flex-basis: 100%;
+        text-align: center;
+        flex-grow: 5;
     }
 }
